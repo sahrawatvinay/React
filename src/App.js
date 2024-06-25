@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
+  const buttonClicked = (a, b) => {
+    console.log("Button  Clicked!!!", a, b);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World!</h1>
+      <button onClick={(e) => buttonClicked("Vinay btn", e)}>Click Me</button>
+      <Garage />
+      <TxtArea />
     </div>
   );
 }
 
+function Car(props) {
+  return <li>{props.brand}</li>;
+}
+
+function Garage() {
+  const cars = [
+    { id: 1, brand: "Ford" },
+    { id: 2, brand: "BMW" },
+    { id: 3, brand: "Audi" },
+  ];
+  return (
+    <>
+      <h4>Garage car collections : </h4>
+      <ul>
+        {cars.map((item) => (
+          <Car key={item.id} brand={item.brand} />
+        ))}
+      </ul>
+    </>
+  );
+}
+
+function TxtArea() {
+  const [val, setValue] = useState("default value");
+
+  const setTextAreaValue = (event) => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <form>
+      <textarea value={val} onChange={setTextAreaValue}></textarea>
+    </form>
+  );
+}
 export default App;
