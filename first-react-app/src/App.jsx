@@ -1,3 +1,5 @@
+import BootstrapElements from "./components/BootstrapElements";
+
 function App() {
   let name = "vinay";
   let numbr = 619;
@@ -6,7 +8,8 @@ function App() {
   }
 
   return <p>
-    Request No. : {numbr} Hello, My name is {name}, full name is {getFullName("Sahrawat")};
+    Request No. : {numbr} Hello, My name is {name}, full name is {getFullName("Sahrawat")}; <br />
+    <BootstrapElements></BootstrapElements>
   </p>
 }
 
