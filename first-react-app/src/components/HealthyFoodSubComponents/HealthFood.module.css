@@ -1,0 +1,9 @@
+.hf-backgrnd-item {
+    color: white !important;
+    background-color: purple !important;
+}
+
+.hf-item-bg-color {
+    color : blue !important;
+    background-color: cyan !important;
+}
