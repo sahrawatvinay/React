@@ -1,8 +1,6 @@
-const ErrorMessage = () => {
-    //let food = [];
-    let food = ["dal", "paneer", "ghee", "milk", "curd"];
+const ErrorMessage = ({healthyFoodItems}) => {
     return (
-        <>{food.length === 0 && <p>I am hungry.</p>}</>
+        <>{healthyFoodItems.length === 0 && <p>I am hungry.</p>}</>
     );
 };
 

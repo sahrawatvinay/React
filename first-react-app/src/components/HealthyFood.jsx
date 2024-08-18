@@ -9,8 +9,8 @@ function HealthyFood() {
     return (
         <>
             <FoodHeading></FoodHeading>
-            <ErrorMessage></ErrorMessage>
-            <FoodItemsList></FoodItemsList>
+            <ErrorMessage healthyFoodItems={food}></ErrorMessage>
+            <FoodItemsList healthyFoodItems={food}></FoodItemsList>
         </>
     );
 }

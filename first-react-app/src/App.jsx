@@ -8,11 +8,11 @@ function App() {
     return name + " " + lastName;
   };
 
-  return <p>
+  return <>
     Request No. : {numbr} Hello, My name is {name}, full name is {getFullName("Sahrawat")}; <br />
     <BootstrapElements></BootstrapElements>
     <HealthyFood></HealthyFood>
-  </p>
+  </>
 }
 
 export default App;
