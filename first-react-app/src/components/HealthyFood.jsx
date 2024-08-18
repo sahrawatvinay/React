@@ -8,7 +8,7 @@ function HealthyFood() {
             {food.length === 0 && <p>I am hungry.</p>}
             <ul className="list-group">
                 {food.map((item) =>
-                    <li className="list-group-item">{item}</li>
+                    <li key={item} className="list-group-item">{item}</li>
                 )}
             </ul>
         </>

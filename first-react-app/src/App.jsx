@@ -1,5 +1,5 @@
 import BootstrapElements from "./components/BootstrapElements";
-import HealthyFood from "./components/ConditionalRendering";
+import HealthyFood from "./components/HealthyFood";
 
 function App() {
   let name = "vinay";
