@@ -2,6 +2,7 @@ import FoodHeading from "./HealthyFoodSubComponents/FoodHeading";
 import ErrorMessage from "./HealthyFoodSubComponents/FoodErrorMessage";
 import FoodItemsList from "./HealthyFoodSubComponents/FoodItemsList";
 import Container from "./HealthyFoodSubComponents/Container";
+import FoodInput from "./HealthyFoodSubComponents/FoodInput";
 
 function HealthyFood() {
     //let food = [];
@@ -11,6 +12,7 @@ function HealthyFood() {
         <>
             <Container>
                 <FoodHeading></FoodHeading>
+                <FoodInput></FoodInput>
                 <ErrorMessage healthyFoodItems={food}></ErrorMessage>
                 <FoodItemsList healthyFoodItems={food}></FoodItemsList>
             </Container>

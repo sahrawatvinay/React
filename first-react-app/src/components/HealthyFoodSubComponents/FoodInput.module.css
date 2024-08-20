@@ -1,0 +1,9 @@
+.fipInput {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0px;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    color: black;
+}
