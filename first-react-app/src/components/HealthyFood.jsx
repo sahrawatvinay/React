@@ -7,12 +7,14 @@ import FoodInput from "./HealthyFoodSubComponents/FoodInput";
 function HealthyFood() {
     //let food = [];
     let food = ["dal", "paneer", "ghee", "milk", "curd"];
-
+    let getInputValue = (event) => {
+        console.log(event.target.value);
+    };
     return (
         <>
             <Container>
                 <FoodHeading></FoodHeading>
-                <FoodInput></FoodInput>
+                <FoodInput handleInput={getInputValue}></FoodInput>
                 <ErrorMessage healthyFoodItems={food}></ErrorMessage>
                 <FoodItemsList healthyFoodItems={food}></FoodItemsList>
             </Container>

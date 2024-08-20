@@ -1,11 +1,8 @@
 import fipStyles from "./FoodInput.module.css"
-const FoodInput = () => {
-    const handleInputEvent = (event) => {
-        console.log(event.target.value);
-    };
+const FoodInput = ({handleInput}) => {
     return (
         <input type="text" className={fipStyles.fipInput}
-            onChange={handleInputEvent} />
+            onChange={handleInput} />
     )
 }
 
