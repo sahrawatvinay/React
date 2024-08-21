@@ -1,10 +1,8 @@
-import hfstyles from "./HealthFood.module.css"
-const handleBuyButtonClicked = () => {
-    console.log("BUY CLICKED", event);
-};
-const FoodItem = ({ foodItem }) => {
+const FoodItem = ({ foodItem, handleBuyClick, active }) => {
     return (
-        <li className="list-group-item"><span>{foodItem}</span><button className="btn btn-info" style={{float: "right"}}>buy</button></li>
+        <li className={`list-group-item ${active && "active"}`}><span>{foodItem}</span>
+            <button onClick={handleBuyClick} className="btn btn-info" style={{ float: "right" }}>buy</button>
+        </li>
     );
 };
 
