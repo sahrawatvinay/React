@@ -1,17 +1,17 @@
 import { createContext, useReducer } from "react";
 
 const DEFAULT_POST_LIST = [{
-    id : '1',
-    title : "Going to mumbai",
+    id: '1',
+    title: "Going to mumbai",
     body: "it will be a lot of fun",
-    reactions : 2,
+    reactions: 2,
     userId: "user-4",
     tages: ["vacation", "mumbai", "enjoying"]
-},{
-    id : '2',
-    title : "Pass ho agye bro",
+}, {
+    id: '2',
+    title: "Pass ho agye bro",
     body: "unbelieveable, hard to believe.",
-    reactions : 15,
+    reactions: 15,
     userId: "user-6",
     tages: ["exams", "engineering"]
 }];
