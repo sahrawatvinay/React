@@ -18,7 +18,7 @@ const DEFAULT_POST_LIST = [{
 
 // Creating a context named PostList with a default value.
 // The default value is an object with an empty postList array and two functions (addPost and deletePost) that do nothing by default.
-const PostList = createContext({
+export const PostList = createContext({
     postList: [],
     addPost: () => { },  // Default empty function for adding a post
     deletePost: () => { } // Default empty function for deleting a post
