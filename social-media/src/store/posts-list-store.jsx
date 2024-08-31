@@ -28,7 +28,11 @@ export const PostList = createContext({
 // It takes the current state (currPostList) and an action, and returns a new state.
 // Currently, the reducer just returns the current state without making any changes.
 const postListReducer = (currPostList, action) => {
-    return currPostList;  // Placeholder: no logic to handle actions yet
+    let newPostList = currPostList;
+    if (action.type == "DELETE_POST") {
+        newPostList = currPostList.filter((post) => post.id !== action.payload.id);
+    }
+    return newPostList;  // Placeholder: no logic to handle actions yet
 };
 
 // The provider component for PostList context.
@@ -42,7 +46,14 @@ const PostListProvider = ({ children }) => {
     const addPost = () => { };
 
     // Function for deleting a post from the list (currently a placeholder).
-    const deletePost = () => { };
+    const deletePost = (id) => {
+        dispatchPostList({
+            type: "DELETE_POST",
+            payload: {
+                id
+            }
+        });
+    };
 
     // Providing the postList state and the functions to the context.
     // Any component that consumes this context can access the postList, addPost, and deletePost.
