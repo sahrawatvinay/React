@@ -13,10 +13,10 @@ const Post = ({ post }) => {
           <MdDelete />
           <span className="visually-hidden">unread messages</span></span></h5>
         <p className="card-text">{post.body}</p>
-        {post.tages.map((tag) => (<span className="badge text-bg-primary" key={tag} style={{ marginRight: '5px' }}>{tag}</span>
+        {post.tags.map((tag) => (<span className="badge text-bg-primary" key={tag} style={{ marginRight: '5px' }}>{tag}</span>
         ))}
         <div className="alert alert-primary reactions" role="alert">
-          This post has been reacted by {post.reactions} people.
+          This post has been reacted by {post.reactions.likes} people.
         </div>
       </div>
     </div>
