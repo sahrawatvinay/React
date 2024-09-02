@@ -9,12 +9,20 @@ const PostList = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    fetch("https://dummyjson.com/posts")
+    const controller = new AbortController();
+    const signal = controller.signal;
+    fetch("https://dummyjson.com/posts", { signal })
       .then((res) => res.json())
       .then((data) => {
         addInitialPosts(data.posts);
         setLoading(false);
       });
+
+    //called when user moves to a different component, or it gets destroyed
+    return () => {
+      console.log("Cleaning up useEffect");
+      controller.abort();
+    };
   }, []);
   return (
     <>
